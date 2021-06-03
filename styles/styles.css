@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ESTILOS GENERALES */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 23vh;
+    background-color: #7b487b;
+    border: 1px solid black;
+    /* border-radius: 2%; */
+}
+
+h1 {
+    font-family: Comic Sans, Comic Sans MS, cursive;
+}
+
+.logo {
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15vw;
+    height: 20vh;
+    margin: 0 3rem;
+    padding-right: 2vw;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+/*    NAV     */
+
+nav {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: wheat;
+    height: 7vh;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.botones {
+    display: flex;
+    background-image: url(../img/pata.png);
+    background-position: left;
+    background-size: 11%;
+    background-repeat: no-repeat;
+    background-color: #7b487b;
+    font-family: Comic Sans, Comic Sans MS, cursive;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 10%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10%;
+    margin: .2rem .5rem;
+}
+
+.seleccionado {
+    background-color: #653165;
+    color: black;
+    font-weight: bolder;
+    font-size: 2.6vh;
+}
+
+.seleccionado:hover {
+    color: black;
+}
+
+.pata {
+    position: absolute;
+    height: 5%
+}
+
+
+/*     MAIN     */
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: wheat;
+}
+
+.carousel {
+    margin-left: 1rem;
+    width: 30%;
+    height: 55%;
+}
+
+.presentacion {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    margin-left: 1rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.presentacion h2 {
+    text-align: center;
+}
+
+.ubicacion {
+    display: flex;
+}
+
+iframe {
+    width: 50%;
+    border-radius: 10%;
+}
+
+.negrita {
+    font-weight: bolder;
+}
+
+
+/*  FOOTER  */
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 15;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    color: #7b487b;
+}
+
+footer p {
+    margin: auto;
+}
+
+.logoFooter {
+    background-image: url(../img/logo.png);
+    background-color: white;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 5vw;
+    height: 5vh;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 0 .5rem
+}
+
+
+/* FORMULARIO CONTACT  */
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.formulario fieldset {
+    margin: .5rem;
+}
+
+.enviarFormulario {
+    padding: 0 .5rem;
+}
+
+
+/* TARJETAS  */
+
+.logoFarmacia {
+    background-image: url(../img/logoVeterinaria.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10%;
+    height: 100%;
+}
+
+.logoJugueteria {
+    background-image: url(../img/logoJugueteria.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10%;
+    height: 100%;
+}
+
+.tituloCard {
+    background-color: #7b487b;
+    color: white;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.tarjetas {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    margin-bottom: 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33%;
+    margin: .5rem 0;
+}
+
+.tarjetas .card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.tarjetas .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 6rem 6.5rem rgba(0, 0, 0, 0.2);
+}
+
+.imagenCard {
+    width: 100%;
+}
+
+.textoCard {
+    text-align: center;
+}
+
+.botonClass {
+    width: auto;
+    background-color: #7b487b;
+    color: white;
+    padding: .5rem;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+.botonClass:hover {
+    color: black;
+}
+
+.tituloPagina {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.ultimasUnidades {
+    background: black;
+    color: red;
+    animation-duration: 1s;
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
