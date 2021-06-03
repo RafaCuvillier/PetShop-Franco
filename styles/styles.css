@@ -251,6 +251,7 @@ footer p {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
     margin: 2rem;
     overflow: hidden;
     text-align: center;
