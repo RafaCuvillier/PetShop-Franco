@@ -1,3 +1,6 @@
+let imagenCard = document.getElementsByClassName("imagenCard")
+let tituloCard = document.getElementsByClassName("tituloCard")
+
 const app = Vue.createApp({
     data() {
         return {
@@ -6,6 +9,11 @@ const app = Vue.createApp({
             medicamentos: [],
             cards: [],
             stocks: [],
+            carrito: [],
+            carritoImprimir: [],
+            comprar: (event) => {
+                this.carrito.push(event.target)
+            },
 
         }
     },
@@ -17,14 +25,24 @@ const app = Vue.createApp({
                 this.juguetes = data.response.filter(articulo => articulo.tipo == "Juguete")
                 this.medicamentos = data.response.filter(articulo => articulo.tipo == "Medicamento")
                 this.stocks = data.response.filter(articulo => articulo.stock <= 5)
-                console.log(this.articulos)
-                console.log(this.juguetes)
-                console.log(this.stocks)
-                console.log(this.medicamentos)
+
+
             }).catch(err => console.log(err.message))
     },
+    methods: {
 
+    },
     computed: {
+        carro() {
+            this.carritoImprimir = []
+            for (let i = 0; i < this.carrito.length; i++) {
+                this.carritoImprimir.push(this.carrito[i])
+            }
+            console.log(this.carritoImprimir)
+
+            return this.carritoImprimir
+        },
+
         imprimirCards() {
             this.cards = []
             for (let i = 0; i < this.juguetes.length; i++) {
@@ -50,6 +68,16 @@ app.mount("#wrapper")
 
 
 function alerta() {
-    alert("Tu informacion fue enviada correctamente")
+    let nombre = document.getElementById("nombre").value
+    let apellido = document.getElementById("apellido").value
+    let tel = document.getElementById("tel").value
+
+    if (nombre == "" || apellido == "0" || tel == "") {
+        alert("Debes completar tus datos personales")
+        return false
+    } else {
+
+        alert("Tu informacion fue enviada correctamente")
+    }
 
 }

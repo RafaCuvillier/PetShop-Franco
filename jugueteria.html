@@ -32,6 +32,29 @@
                 <div class="tituloPagina">
                     <div class="logoJugueteria"></div>
                     <h2>Jugueteria</h2>
+                    <div class="dropdown carrito">
+                        <button class=" logoCarrito" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <div>
+
+                                    <div class="cardCarrito card-body">
+                                        <aside class="col-sm-4">
+                                            <h2>Productos:</h2>
+                                            <ul id="carrito" class="list-group" v-for="productos in carro">
+                                                <div>
+                                                    <p>{{productos.id}}</p>
+                                                </div>
+                                            </ul>
+
+                                        </aside>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
                 <div class="cards" v-for="juguete in imprimirCards">
                     <div class="card">
@@ -41,7 +64,7 @@
 
                         <p class="stock" v-if="juguete.stock <= 5">Cantidad disponible: {{juguete.stock}} <br> <span class="ultimasUnidades">ULTIMAS UNIDADES!!!</span></p>
                         <p class="stock" v-else="juguete.stock > 5">Cantidad disponible: {{juguete.stock}}</p>
-                        <button class="botonClass">Comprar</button>
+                        <button class="botonClass" v-bind:onclick="comprar" v-bind:id="juguete.nombre">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -49,9 +72,7 @@
 
         </main>
         <footer class="position-fixed bottom-0 d-flex">
-            <!-- <div class="logoFooter"></div> -->
             <p>Franco Pet-Shop - Rio de Janeiro 300 (Caballito)</p>
-            <!-- <div class="logoFooter"></div> -->
 
         </footer>
     </div>

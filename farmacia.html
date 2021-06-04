@@ -24,31 +24,57 @@
                 <a class="botones" href="./contact.html">Contáctenos</a>
                 <a class="botones seleccionado" href="#">Farmacia</a>
                 <a class="botones" href="./jugueteria.html">Jugueteria</a>
+
             </div>
         </nav>
         <main>
             <div class="tarjetas">
                 <div class="tituloPagina">
+
                     <div class="logoFarmacia"></div>
                     <h2>Farmacia</h2>
+
+                    <div class="dropdown carrito">
+                        <button class=" logoCarrito" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <div>
+
+                                    <div class="cardCarrito card-body">
+                                        <aside class="col-sm-4">
+                                            <h2>Productos:</h2>
+                                            <ul id="carrito" class="list-group" v-for="productos in carro">
+                                                <div>
+                                                    <p>{{productos.id}}</p>
+                                                </div>
+                                            </ul>
+
+                                        </aside>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
                 <div class="cards" v-for="medicamento in imprimirCardsMedicamentos">
-                    <div class="card">
+                    <div class="card" id="card">
                         <img v-bind:src="medicamento.imagen" alt="..." class="imagenCard">
                         <h4 class="tituloCard">{{medicamento.nombre}}</h4>
                         <p class="textoCard">{{medicamento.descripcion}}</p>
                         <p class="stock" v-if="medicamento.stock <= 5">Cantidad disponible: {{medicamento.stock}} <br> <span class="ultimasUnidades">ULTIMAS UNIDADES!!!</span></p>
                         <p class="stock" v-else="medicamento.stock > 5">Cantidad disponible: {{medicamento.stock}}</p>
-                        <a href="#" class="botonClass">Comprar</a>
+                        <button class="botonClass" v-bind:onclick="comprar" v-bind:id="medicamento.nombre">Comprar</button>
                     </div>
                 </div>
             </div>
 
+
+
         </main>
         <footer>
-            <!-- <div class="logoFooter "></div> -->
             <p>Franco Pet-Shop - Rio de Janeiro 300 (Caballito)</p>
-            <!-- <div class="logoFooter "></div> -->
 
     </div>
     </footer>

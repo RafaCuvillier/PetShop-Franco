@@ -29,19 +29,19 @@
         <main>
             <div class="formulario">
 
-                <form >
+                <form onsubmit="alerta()">
                     <fieldset>
                         <legend>Datos Personales</legend>
                         Nombre:
-                        <input type="text" >
+                        <input type="text" id="nombre">
                         Apellido:
-                        <input type="text" >
+                        <input type="text" id="apellido">
                         Telefono:
-                        <input type="tel" >
+                        <input type="tel" id="tel">
                     </fieldset>
                     <fieldset>
                         <legend>Informacion sobre su mascota</legend>
-                        <p>Marque la(s) casilla(s) correcta(s)</p>
+                        <p>¿Tiene alguna de estas mascotas?</p>
                         <label for="perro">
                             Perro
                             <input type="checkbox" id="perro">
@@ -50,7 +50,6 @@
                             Gato
                             <input type="checkbox" id="gato">
                         </label>
-                        <input type="text" name="Otros" id="" placeholder="Otros">
                     </fieldset>
                     <fieldset>
                         <legend>
@@ -58,14 +57,12 @@
                         </legend>
                         <textarea name="" id="" cols="50" rows="7"></textarea>
                     </fieldset>
-                    <input type=reset onclick="alerta()" value="Enviar" class="enviarFormulario">
+                    <input type="submit" value="Enviar" class="enviarFormulario">
                 </form>
             </div>
         </main>
         <footer class="position-fixed bottom-0">
-            <!-- <div class="logoFooter"></div> -->
             <p>Franco Pet-Shop - Rio de Janeiro 300 (Caballito)</p>
-            <!-- <div class="logoFooter"></div> -->
 
         </footer>
     </div>
