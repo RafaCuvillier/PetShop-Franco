@@ -63,8 +63,10 @@
                         <img v-bind:src="medicamento.imagen" alt="..." class="imagenCard">
                         <h4 class="tituloCard">{{medicamento.nombre}}</h4>
                         <p class="textoCard">{{medicamento.descripcion}}</p>
+                        <p class="precio">Precio: ${{medicamento.precio}}</p>
                         <p class="stock" v-if="medicamento.stock <= 5">Cantidad disponible: {{medicamento.stock}} <br> <span class="ultimasUnidades">ULTIMAS UNIDADES!!!</span></p>
                         <p class="stock" v-else="medicamento.stock > 5">Cantidad disponible: {{medicamento.stock}}</p>
+
                         <button class="botonClass" v-bind:onclick="comprar" v-bind:id="medicamento.nombre">Comprar</button>
                     </div>
                 </div>

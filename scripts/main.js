@@ -34,12 +34,9 @@ const app = Vue.createApp({
     },
     computed: {
         carro() {
-            this.carritoImprimir = []
             for (let i = 0; i < this.carrito.length; i++) {
                 this.carritoImprimir.push(this.carrito[i])
             }
-            console.log(this.carritoImprimir)
-
             return this.carritoImprimir
         },
 
